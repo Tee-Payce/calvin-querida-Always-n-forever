@@ -47,16 +47,16 @@ export async function sendRsvpEmail(data: RsvpEmailData): Promise<void> {
     <p><strong>Submitted At:</strong> ${data.submitted_at || new Date().toLocaleString()}</p>
   `;
 
-  try 
+  try {
     const info = await transporter.sendMail({
-    from: `"Calvin & Querida RSVP" <${SMTP_FROM || SMTP_USER}>`,
-    to: EMAIL_TO || 'sizibapatrickjnr@gmail.com',
-    subject,
-    html,
-  });
-  console.log("[email] Sent successfully: %s", info.messageId);
-} catch (error) {
-  console.error("[email] Failed to send:", error);
-  throw error;
-}
+      from: `"Calvin & Querida RSVP" <${SMTP_FROM || SMTP_USER}>`,
+      to: EMAIL_TO || 'sizibapatrickjnr@gmail.com',
+      subject,
+      html,
+    });
+    console.log("[email] Sent successfully: %s", info.messageId);
+  } catch (error) {
+    console.error("[email] Failed to send:", error);
+    throw error;
+  }
 }
