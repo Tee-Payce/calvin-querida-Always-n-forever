@@ -12,7 +12,7 @@ interface RsvpEmailData {
 
 export async function sendRsvpEmail(data: RsvpEmailData): Promise<void> {
   const apiKey = process.env.RESEND_API_KEY;
-  const emailTo = process.env.EMAIL_TO || "teepayce11@gmail.com";
+  const emailTo = process.env.EMAIL_TO || "onboarding@resend.dev";
 
   if (!apiKey) {
     console.error("[email] RESEND_API_KEY missing. RSVP saved to database only.");
