@@ -26,6 +26,8 @@ export function RsvpForm() {
     fetch("/api/rsvp", { method: "GET", headers: { "x-warmup": "1" } }).catch(() => {});
   }, []);
 
+
+
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const fd = new FormData(e.currentTarget);
@@ -123,32 +125,7 @@ export function RsvpForm() {
           ))}
         </div>
       </div>
-      {attendance === "accept" && (
-        <div>
-          {/* Partner */}
-          <label className="flex items-center gap-3 text-sm text-foreground/80">
-            <input
-              type="checkbox"
-              checked={withPartner}
-              onChange={(e) => setWithPartner(e.target.checked)}
-              disabled={loading}
-              className="h-4 w-4 accent-[color:var(--gold)]"
-            />
-            I am attending with a partner
-          </label>
-          {withPartner && (
-            <div className="mt-4">
-              <label className={label}>Partner&apos;s Full Name</label>
-              <input
-                name="partnerName"
-                className={field}
-                placeholder="Partner's name"
-                disabled={loading}
-              />
-            </div>
-          )}
-        </div>
-      )}
+      
       {/* Contact */}
       <div>
         <label className={label}>Email or Phone *</label>
