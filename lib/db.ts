@@ -1,4 +1,4 @@
-import postgres from "postgres";
+﻿import postgres from "postgres";
 
 let _sql: ReturnType<typeof postgres> | null = null;
 
@@ -41,4 +41,10 @@ export async function getAllRsvps() {
   const sql = getDb();
   const rows = await sql<Rsvp[]>`SELECT * FROM rsvps ORDER BY submitted_at DESC`;
   return rows;
+}
+
+
+export async function keepAlive(): Promise<void> {
+  const sql = getDb();
+  await sqlINSERT INTO keepalive (id, pinged_at) VALUES (1, NOW()) ON CONFLICT (id) DO UPDATE SET pinged_at = NOW();
 }

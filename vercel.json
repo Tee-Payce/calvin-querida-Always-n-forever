@@ -1,7 +1,16 @@
-{
+﻿{
   "functions": {
     "app/api/rsvp/route.ts": {
       "regions": ["cpt1"]
+    },
+    "app/api/keepalive/route.ts": {
+      "regions": ["cpt1"]
     }
-  }
+  },
+  "crons": [
+    {
+      "path": "/api/keepalive",
+      "schedule": "*/5 * * * *"
+    }
+  ]
 }
