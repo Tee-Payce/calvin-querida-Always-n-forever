@@ -46,5 +46,5 @@ export async function getAllRsvps() {
 
 export async function keepAlive(): Promise<void> {
   const sql = getDb();
-  await sqlINSERT INTO keepalive (id, pinged_at) VALUES (1, NOW()) ON CONFLICT (id) DO UPDATE SET pinged_at = NOW();
+  await sql`INSERT INTO keepalive (id, pinged_at) VALUES (1, NOW()) ON CONFLICT (id) DO UPDATE SET pinged_at = NOW()`;
 }
