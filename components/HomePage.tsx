@@ -283,7 +283,7 @@ export function HomePage() {
 
             {/* RSVP */}
             <section className="py-12">
-              <div className="mx-auto max-w-3xl px-6">
+              {/* <div className="mx-auto max-w-3xl px-6">
                 <SectionHeading eyebrow="Kindly Respond" title="RSVP" />
                 <p className="mb-4 text-center font-serif text-lg text-foreground/80">
                   Please confirm your attendance by{" "}
@@ -298,7 +298,14 @@ export function HomePage() {
                <strong>Please be aware the wedding is strictly by invitation</strong>
                 </p>
                 <RsvpForm />
+              </div> */}
+              <div className="mx-auto max-w-3xl px-6">
+                <SectionHeading eyebrow="Kindly Respond" title="RSVP" />
+                <p className="mb-4 text-center font-serif text-lg text-foreground/80">
+               RSVPs are now closed as we have passed the deadline to confirm guests in attendance with our venue. we wish we could celebrate with everyone! Your love and well wishes mean the world to us.
+                </p>
               </div>
+
             </section>
 
             {/* GIFTS */}
