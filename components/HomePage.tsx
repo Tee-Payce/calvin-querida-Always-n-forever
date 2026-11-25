@@ -355,7 +355,7 @@ export function HomePage() {
                   </AccordionTrigger>
                   <AccordionContent className="font-serif bg-white rounded-lg text-base text-foreground/80 space-y-1">
                     <p><span className="text-gold ml-2">Account Name:</span> Querida Kuzamba</p>
-                    <p><span className="text-gold ml-2">Paypal Link:</span><span><a href="https://www.paypal.me/quekuz" className="italic" > Send Gift here</a></span></p>
+                    <p><span className="text-gold ml-2">Paypal Link:</span><span><a href="https://www.paypal.me/quekuz" className="italic" > Click here to send a gift</a></span></p>
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>
