@@ -107,7 +107,7 @@ export function HomePage() {
                   className="mt-1 italic text-xl md:text-xl"
                   style={{ lineHeight: 1, color: "#3B3A2E" }}
                 >
-                  Calvin <span style={{ color: "#5B6142" }}>&</span> Querida
+                  Calvin Madzivanyika <span style={{ color: "#5B6142" }}>&</span> Querida Kuzamba
                 </motion.h1>
 
                 <motion.div
@@ -328,6 +328,34 @@ export function HomePage() {
                     <p><span className="text-gold ml-2">Sort Code:</span> 23-01-20</p>
                     <p><span className="text-gold ml-2">Account:</span> 53661849</p>
                     <p><span className="text-gold ml-2">Owner:</span> Querida Kuzamba</p>
+                  </AccordionContent>
+                  <AccordionContent className="font-serif mt-5 bg-white rounded-lg text-base text-foreground/80 space-y-1">
+                    <p><span className="text-gold ml-2">Bank Name:</span> First Capital Bank</p>
+                  
+                    <p><span className="text-gold ml-2">Account:</span> 199013375530</p>
+                    <p><span className="text-gold ml-2">Owner:</span> Calvin Madzivanyika</p>
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+              <Accordion type="single" collapsible className="mt-8 w-full max-w-sm mx-auto text-left">
+                <AccordionItem value="bank-details" className="border-border">
+                  <AccordionTrigger className="font-serif text-lg italic hover:text-gold hover:no-underline">
+                    Ecocash Details
+                  </AccordionTrigger>
+                  <AccordionContent className="font-serif bg-white rounded-lg text-base text-foreground/80 space-y-1">
+                    <p><span className="text-gold ml-2">Account Name:</span> Calvin Madzivanyika</p>
+                    <p><span className="text-gold ml-2">Ecocash Number:</span> 078 374 6903</p>
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+              <Accordion type="single" collapsible className="mt-8 w-full max-w-sm mx-auto text-left">
+                <AccordionItem value="bank-details" className="border-border">
+                  <AccordionTrigger className="font-serif text-lg italic hover:text-gold hover:no-underline">
+                    PayPal Details
+                  </AccordionTrigger>
+                  <AccordionContent className="font-serif bg-white rounded-lg text-base text-foreground/80 space-y-1">
+                    <p><span className="text-gold ml-2">Account Name:</span> Querida Kuzamba</p>
+                    <p><span className="text-gold ml-2">Paypal Link:</span><span><a href="https://www.paypal.me/quekuz" className="italic" > Send Gift here</a></span></p>
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>
